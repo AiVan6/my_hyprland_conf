@@ -1,2 +1,2 @@
 #!/bin/sh
-hyprctl dispatch workspaceopt allfloat
+hyprctl dispatch alterzorder allfloat
