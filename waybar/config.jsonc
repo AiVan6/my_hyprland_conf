@@ -1,0 +1,32 @@
+// -*- mode: jsonc -*-
+{
+  "layer": "top",
+  "position": "top",
+  "height": 34,
+  "spacing": 4,
+  "margin-top": 6,
+  "margin-left": 10,
+  "margin-right": 10,
+
+  "modules-left": [
+    "hyprland/workspaces",
+    "hyprland/window"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "cpu",
+    "memory",
+    "network",
+    "pulseaudio",
+    "hyprland/language",
+    "battery",
+    "tray",
+    "custom/notifications"
+  ],
+
+  "include": [
+    "~/.config/hypr/waybar/modules.json"
+  ]
+}

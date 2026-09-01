@@ -1,0 +1,56 @@
+{
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "format": "{name}",
+        "persistent-workspaces": { "*": 5 }
+    },
+    "hyprland/window": {
+        "format": " {title} ",
+        "max-length": 40,
+        "rewrite": { "(.*) — Mozilla Firefox": "  $1" }
+    },
+    "hyprland/language": {
+       "format": "   {}",
+       "format-en": "EN",
+       "format-ru": "RU"
+    },
+    "clock": {
+        "format": "  {:%H:%M} ",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt>{calendar}</tt>"
+    },
+    "cpu": {
+        "format": "  {usage}% ",
+        "interval": 2
+    },
+    "memory": {
+        "format": "  {percentage}% "
+    },
+    "network": {
+        "format-wifi": "  ",
+        "format-ethernet": " 󰈀 ",
+        "format-disconnected": " 󰖪 ",
+        "tooltip-format": "{essid} ({signalStrength}%)"
+    },
+    "pulseaudio": {
+        "format": " {icon} {volume}% ",
+        "format-muted": "   Muted ",
+        "format-icons": { "default": ["", "", ""] },
+        "on-click": "pavucontrol"
+    },
+    "battery": {
+        "states": { "warning": 30, "critical": 15 },
+        "format": " {icon} {capacity}% ",
+        "format-charging": " 󰂄 {capacity}% ",
+        "format-plugged": "  {capacity}% ",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "tray": {
+        "spacing": 10
+    },
+    "custom/notifications": {
+        "exec": "count=$(makoctl list | grep '^Notification' | wc -l); if [ \"$count\" -gt 0 ]; then echo '  '; else echo '  '; fi",
+        "format": "{}",
+        "on-click": "makoctl dismiss -a",
+        "interval": 3
+    }
+}
